@@ -9,10 +9,10 @@
 
   </head>
   <body>
-    <div ng-controller="RecipeController">
+    <div ng-controller="RecipeController as vm">
       <h4>My Recipes</h4>
       <ul>
-        <li ng-repeat="recipe in recipes">{{recipe}}</li>
+        <li ng-repeat="recipe in vm.recipes track by $index">{{recipe}}</li>
       </ul>
     </div>
   </body>
