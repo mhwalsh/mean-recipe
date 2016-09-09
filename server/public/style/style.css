@@ -1,0 +1,27 @@
+.myform {
+  margin:0 auto;
+  padding:14px;
+}
+#stylized {
+  border-width:1px;
+  border-style:solid;
+  border-color:#b7ddf2;
+  background:#ebf4fb;
+}
+
+#stylized label {
+  display:block;
+  font-weight:bold;
+  text-align:left;
+}
+#stylized input {
+  padding:4px 2px;
+  border:solid 1px #aacfe4;
+  margin:2px 0 20px 10px;
+}
+
+#stylized textarea {
+  padding:4px 2px;
+  border:solid 1px #aacfe4;
+  margin:2px 0 20px 10px;
+}
