@@ -1,7 +1,7 @@
 (function() {
   var app = angular.module('app', []);
 
-  app.controller("RecipeController", function($http) {
+  app.controller("RecipeController", function($http){
     var self = this;
     this.recipes = [];
 
@@ -15,6 +15,25 @@
         this.recipes = response.data;
       }));
     };
+
     getRecipes();
+
+    this.createRecipe = function(name, url, note){
+      console.log('called createRecipe');
+
+      var dataToSend = {
+        name: name,
+        url: url,
+        note: note
+      };
+      console.log('dataToSend=', dataToSend);
+
+      $http.post('/recipes', dataToSend).then(function(response) {
+        console.log(response);
+        getRecipes();
+
+
+      });
+    };
   });
 }());

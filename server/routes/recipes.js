@@ -15,6 +15,7 @@ router.get('/', function(request, response){
 router.post('/', function(request, response){
 
   var newRecipe = Recipes(request.body);
+
   newRecipe.save(function(err){
       if(err){
         console.log('error saving to db!!');

@@ -18,18 +18,21 @@
       </ul>
 
       <h4>Add New</h4>
+
       <div id="stylized" class="myform">
         <form>
           <label for="name"> Name:
-            <input id="name" type="text">
+            <input ng-model="name" id="name" type="text">
           </label>
           <label for="url"> URL:
-            <input id="url" type="text">
+            <input ng-model="url" id="url" type="text">
           </label>
           <label for="note"> Notes:</label>
-          <textarea id="note" type="textarea"></textarea>
-          <input type="button" name="name" value="Add new">
+          <textarea ng-model="note" id="note" type="textarea"></textarea>
+
+          <input ng-click="vm.createRecipe(name, url, note)" type="button" name="name" value="Add new">
         </form>
+
       </div>
     </div>
   </body>
